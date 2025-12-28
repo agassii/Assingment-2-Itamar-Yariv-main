@@ -57,6 +57,23 @@ public class TiredThread extends Thread implements Comparable<TiredThread> {
      */
     public void newTask(Runnable task) {
        // TODO
+        if (!alive.get()) {
+            throw new IllegalStateException("Worker is shut down.");
+        }
+        if (!busy.compareAndSet(false, true)) {
+            throw new IllegalStateException("Worker is busy.");
+        }
+        // Update idle time
+        long idleEndTime = System.nanoTime();
+        long idleDuration = idleEndTime - idleStartTime.get();
+        timeIdle.addAndGet(idleDuration);
+
+        try {
+            handoff.put(task);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException("Interrupted while assigning task to worker.", e);
+        }
     }
 
     /**
@@ -65,16 +82,56 @@ public class TiredThread extends Thread implements Comparable<TiredThread> {
      */
     public void shutdown() {
        // TODO
+        alive.set(false);
+        try {
+            handoff.put(POISON_PILL);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException("Interrupted while shutting down worker.", e);
+        }
     }
 
     @Override
     public void run() {
        // TODO
+        while (alive.get()) {
+            Runnable task;
+            try {
+                task = handoff.take();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            }
+
+            if (task == POISON_PILL) {
+                break; // Exit loop on poison pill
+            }
+
+            long startTime = System.nanoTime();
+            try {
+                task.run();
+            } catch (RuntimeException e) {
+                // Handle task exceptions if necessary
+
+            } finally {
+                long endTime = System.nanoTime();
+                long duration = endTime - startTime;
+                timeUsed.addAndGet(duration);
+                busy.set(false);
+                idleStartTime.set(System.nanoTime());
+            }
+        }
     }
 
     @Override
     public int compareTo(TiredThread o) {
         // TODO
+        if (this.getFatigue() < o.getFatigue()) {
+            return -1;
+        } else if (this.getFatigue() > o.getFatigue()) {
+            return 1;
+        }
+
         return 0;
     }
 }

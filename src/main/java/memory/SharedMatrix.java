@@ -15,7 +15,7 @@ public class SharedMatrix {
     public void loadRowMajor(double[][] matrix) {
         validateRectangular(matrix);
         SharedVector[] newVectors = new SharedVector[matrix.length];
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < matrix.length || matrix.length == 0; i++) {
             newVectors[i] = new SharedVector(matrix[i], VectorOrientation.ROW_MAJOR);
         }
         this.vectors = newVectors;
@@ -26,6 +26,10 @@ public class SharedMatrix {
     public void loadColumnMajor(double[][] matrix) {
         // TODO: replace internal data with new column-major matrix
         validateRectangular(matrix);
+        if (matrix.length == 0) {
+            this.vectors = new SharedVector[0];
+            return;
+        }
         SharedVector[] newVectors = new SharedVector[matrix[0].length];
         for (int j = 0; j < matrix[0].length; j++) {
             double[] column = new double[matrix.length];
@@ -137,13 +141,12 @@ public class SharedMatrix {
 
      private void validateRectangular(double[][] matrix) {
         if (matrix == null) throw new IllegalArgumentException("matrix cannot be null");
-        if (matrix.length == 0) throw new IllegalArgumentException("matrix cannot be empty");
-        if (matrix[0] == null || matrix[0].length == 0) throw new IllegalArgumentException("matrix rows cannot be empty");
-
-        int width = matrix[0].length;
+        if (matrix.length == 0) {
+        return;
+    }
         for (int i = 0; i < matrix.length; i++) {
             if (matrix[i] == null) throw new IllegalArgumentException("matrix row cannot be null");
-            if (matrix[i].length != width) throw new IllegalArgumentException("matrix must be rectangular");
+            if (matrix[i].length != matrix[0].length) throw new IllegalArgumentException("matrix must be rectangular");
         }
     }
 }

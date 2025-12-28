@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="memory.SharedVectorTest" time="0.029" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="memory.SharedVectorTest" time="0.036" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1255"/>
-    <property name="java.class.path" value="C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\test-classes;C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\classes;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\hapoe\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\test-classes;C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\classes;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\hapoe\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\hapoe\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\hapoe\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\hapoe\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\hapoe\AppData\Local\Temp\surefire15909223236014964313\surefirebooter-20251217172420827_3.jar C:\Users\hapoe\AppData\Local\Temp\surefire15909223236014964313 2025-12-17T17-24-20_636-jvmRun1 surefire-20251217172420827_1tmp surefire_0-20251217172420827_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\hapoe\AppData\Local\Temp\surefire9666120676239332184\surefirebooter-20251228153502384_3.jar C:\Users\hapoe\AppData\Local\Temp\surefire9666120676239332184 2025-12-28T15-35-02_210-jvmRun1 surefire-20251228153502384_1tmp surefire_0-20251228153502384_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\test-classes;C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\classes;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\hapoe\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\test-classes;C:\Users\hapoe\OneDrive\מסמכים\Assingment-2-Itamar-Yariv-main\target\classes;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\hapoe\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\hapoe\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\hapoe\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\hapoe\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\hapoe\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\hapoe"/>
     <property name="user.language" value="he"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\hapoe\AppData\Local\Temp\surefire15909223236014964313\surefirebooter-20251217172420827_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\hapoe\AppData\Local\Temp\surefire9666120676239332184\surefirebooter-20251228153502384_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
@@ -58,12 +58,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="add_sameOrientationAndLength_addsInPlace" classname="memory.SharedVectorTest" time="0.002"/>
-  <testcase name="vecMatMul_rowVectorTimesColumnMajorMatrix_correct" classname="memory.SharedVectorTest" time="0.002"/>
-  <testcase name="add_mismatchedLength_throws" classname="memory.SharedVectorTest" time="0.001"/>
-  <testcase name="add_mismatchedOrientation_throws" classname="memory.SharedVectorTest" time="0.004"/>
-  <testcase name="dot_rowDotColumn_correct" classname="memory.SharedVectorTest" time="0.002"/>
-  <testcase name="negate_negatesAllEntries" classname="memory.SharedVectorTest" time="0.003"/>
-  <testcase name="dot_wrongOrientation_throws" classname="memory.SharedVectorTest" time="0.001"/>
-  <testcase name="transpose_togglesOrientation" classname="memory.SharedVectorTest" time="0.002"/>
+  <testcase name="add_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.002"/>
+  <testcase name="constructor_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.003"/>
+  <testcase name="dot_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.002"/>
+  <testcase name="get_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.002"/>
+  <testcase name="vecMatMul_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.002"/>
+  <testcase name="negate_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.002"/>
+  <testcase name="transpose_valid_edge_invalid" classname="memory.SharedVectorTest" time="0.002"/>
 </testsuite>
